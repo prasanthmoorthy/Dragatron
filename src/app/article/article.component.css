@@ -1,0 +1,94 @@
+ 
+.pagheadng {
+    font-size: 1rem;
+    text-align: left;
+    padding: 2px 6px;
+    margin: 7px 15px;
+    color: #464343;
+    /* background: rgba(33, 150, 243, .09); */
+    display: inline-block;
+    border-left: 3px solid #333;
+    text-transform: uppercase; 
+}
+h3 { 
+    color: blue;
+}
+table {
+    margin-top: 12px; 
+}
+table, th, td {
+     
+    font-size:17px;
+    padding: 5px;
+}
+input {
+    width: 225px;
+    margin: 8px 0;
+    background-color: #fff;
+    font-size:17px;
+    border: 1px solid;
+    outline: none;
+}
+button {
+    background-color: #008CBA;
+    color: white;
+}
+.error{
+    color: red;
+    font-size: 16px;
+    margin-left: 15px;
+}
+.success{
+    color: green;
+    font-size: 20px;
+} 
+
+.search-hero{
+    font-family: FontAwesome;
+    font-weight: normal;
+    overflow: visible;
+    vertical-align: top;
+    display: inline-block !important;
+    padding-left: 5px;
+    padding-top: 2px;
+    color: #008cba !important;
+}
+
+
+
+.serchcurv {
+    border-radius: 5px!important;
+    margin: 7px 5px; 
+    border: 1px solid #dedede!important;
+    background-color: #fff;
+    color: #404040; 
+}
+
+.pagheadng {
+    font-size: 1rem;
+    text-align: left;
+    padding: 2px 6px;
+    margin: 7px 15px;
+    color: #464343;
+    /* background: rgba(33, 150, 243, .09); */
+    display: inline-block;
+    border-left: 3px solid #333;
+    text-transform: uppercase; 
+}
+ 
+.container{
+    padding: 16px;
+}
+    
+@media only screen and (max-width: 600px) { 
+    .container {  
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;  
+    }
+    input {
+        width: 165px; 
+    }
+
+}

@@ -1,0 +1,173 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="form-row">
+        <div class="col-sm-3">
+          Item Creation
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="articleForm" (ngSubmit)="onArticleFormSubmit()">
+        <div class="form-row">
+          <div class="text-right">
+            <h2 class="pagheadng">Add Items</h2>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="width_custom">
+            <tr>
+              <td>Item Name</td>
+              <td>
+                <input formControlName="ItemName" type="text" />
+                <label
+                  *ngIf="
+                    articleForm.get('ItemName').invalid && processValidation" class="error">
+                  Item Name is required.</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Item Image</td>
+              <td>
+                <input formControlName="ItemImage" type="file" />
+                <label
+                  *ngIf="
+                    articleForm.get('ItemImage').invalid && processValidation
+                  "
+                  class="error"
+                >
+                  Item Image is required.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Item price</td>
+              <td>
+                <input
+                  formControlName="Itemprice"
+                  type="number"
+                  min="0.01"
+                  step="0.01"
+                  max="2500"
+                />
+                <label
+                  *ngIf="
+                    articleForm.get('Itemprice').invalid && processValidation
+                  "
+                  class="error"
+                >
+                  Item price is required.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Item description</td>
+              <td>
+                <input formControlName="Itemdescription" type="text" />
+                <label
+                  *ngIf="
+                    articleForm.get('Itemdescription').invalid &&
+                    processValidation
+                  "
+                  class="error"
+                >
+                  Item description is required.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Item additionDate</td>
+              <td>
+                <input formControlName="ItemadditionDate" type="date" />
+                <label
+                  *ngIf="
+                    articleForm.get('ItemadditionDate').invalid &&
+                    processValidation
+                  "
+                  class="error"
+                >
+                  Item additionDate is required.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button
+                  type="submit"
+                  class="btn btn-success btn_cancel"
+                  prevent-double-submit
+                >
+                  CREATE
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </div>
+    <div class="card-body">
+      <div class="form-row">
+        <div class="text-right">
+          <h2 class="pagheadng">List Items</h2>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-3">
+          <div class="search-hero">
+            <input
+              class="form-control"
+              type="text"
+              name="search"
+              [(ngModel)]="searchText"
+              autocomplete="off"
+              placeholder="&#61442;  Search here"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table
+          class="table table-bordered table-condensed table-striped"
+          *ngIf="allArticles && allArticles.length">
+          <thead class="thead-light">
+            <tr>
+              <th>ID</th>
+              <th>ItemName</th>
+              <th>ItemImage</th>
+              <th>Itemprice</th>
+              <th>Itemdescription</th>
+              <th>ItemadditionDate</th>
+              <th
+                style="width: 100px; vertical-align: -webkit-baseline-middle;">
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let obj of allArticles | filter: searchText">
+              <td>{{ obj.id }}</td>
+              <td>{{ obj.ItemName }}</td>
+              <td>{{ obj.ItemImage }}</td>
+              <td>{{ obj.Itemprice | currency: "INR" }}</td>
+              <td>{{ obj.Itemdescription }}</td>
+              <td>{{ obj.ItemadditionDate | date: "MM-dd-yyyy" }}</td>
+              <td class="text-center">
+                <i
+                  class="far fa-eye bgblue pointer"
+                  title="View"
+                  [routerLink]="['/Articleview', obj.id]"
+                ></i>
+                &nbsp;
+                <i
+                  class="fa fa-trash bgred pointer"
+                  title="Delete"
+                  (click)="deleteArticle(obj.id)"
+                ></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

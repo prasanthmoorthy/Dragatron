@@ -1,0 +1,214 @@
+.landscren {
+	margin-top: .5rem;
+}
+
+.landscren p {
+	font-size: 10px;
+	text-align: center;
+	text-transform: capitalize;
+	margin-top: 2.5rem;
+	display: inline-block;
+}
+
+.landscren img {
+	margin-bottom: 12px;
+}
+
+.landscren h2 {
+	font-size: 16px;
+	font-weight: normal;
+	text-align: center;
+	text-transform: capitalize;
+	margin-bottom: .2rem;
+}
+
+.loginform-control {
+	display: block;
+	width: 100%;
+	height: calc(2.25rem + 2px);
+	padding: .275rem .55rem;
+	font-size: .80rem;
+	line-height: 1.5;
+	color: #515559;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-bottom: 1px solid #cecece;
+	border-radius: 0;
+	transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	border-top: 1px solid #FFF;
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+}
+
+.loginform-control:focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	border-bottom-color: rgb(128, 189, 255);
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.card {
+	-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+	border: 0;
+	font-weight: 400;
+}
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 270px;
+	word-wrap: break-word;
+	background-color: #ffffffb8;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, .125);
+	border-radius: 0rem;
+}
+
+.card-body {
+	padding: 10px;
+	-webkit-border-radius: 0!important;
+	border-radius: 0!important;
+}
+
+.centered {
+	position: fixed;
+	top: 35%;
+	left: 36%;
+	transform: translate(-0%, -20%);
+	-webkit-transform: translate(-0%, -20%);
+	-moz-transform: translate(-0%, -20%);
+	-o-transform: translate(-0%, -20%);
+	-ms-transform: translate(-0%, -20%);
+	z-index: 100;
+	width: 60%;
+}
+
+.control-label {
+	font-weight: 500;
+}
+
+
+/****/
+
+.form-horizontal .control-label {
+	padding-top: 10px !important;
+	margin: 0px 3px;
+	text-align: right;
+	vertical-align: super;
+	text-transform: capitalize;
+	font-size: 11px;
+}
+
+a {
+	color: #337ab7;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.btn-success {
+	color: #fff;
+	background-color: #cf335e;
+	border-color: #cf335e;
+}
+
+.btn-success:hover {
+	color: #fff;
+	background-color: #7f7f7f;
+	border-color: #7f7f7f;
+}
+
+label {
+	text-transform: none !important;
+}
+
+.actionheading h2 {
+	text-transform: uppercase !important;
+	margin: 5px !important;
+}
+
+.terms p {
+	margin-top: 2px;
+	text-align: left;
+	text-transform: inherit;
+	font-size: 10px;
+}
+
+.cardvideo {
+	background-color: #000;
+}
+
+
+/**07012020 SHIVA**/
+
+
+/*MEDIA QUEARY FOR MOBILE BELOW 4.5*/
+
+@media screen and (max-width:480px) {
+	.centered {
+		position: fixed;
+		top: 22%;
+		right: 0%;
+		left: 2%;
+		z-index: 100;
+		transform: translate(-0%, -10%);
+		-webkit-transform: translate(-0%, -10%);
+		-moz-transform: translate(-0%, -10%);
+		-o-transform: translate(-0%, -10%);
+		-ms-transform: translate(-0%, -10%);
+	}
+	.card {
+		box-shadow: none;
+		width: 305px;
+		word-wrap: break-word;
+		background-color: #ffffffb8;
+		border: transparent;
+	}
+	.signinsection {
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+	.landscren {
+		margin-top: 0.5rem;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.signinsection {
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		padding: 0;
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+	.centered[_ngcontent-c2] {
+		position: fixed;
+		top: 40%;
+		right: 24%;
+		transform: translate(-0%, -50%);
+		-webkit-transform: translate(-0%, -50%);
+		-moz-transform: translate(-0%, -50%);
+		-o-transform: translate(-0%, -50%);
+		-ms-transform: translate(-0%, -50%);
+		z-index: 100;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	.signinsection {
+		width: 100%;
+		height: 100vh;
+		margin: 0 auto;
+		padding: 0;
+		background-size: contain;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+}
